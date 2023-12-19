@@ -4,13 +4,11 @@
 	"description": "Ui components",
 	"main": "index.ts",
 	"scripts": {
-		"dev": "webpack --env mode=development",
 		"build": "webpack --env mode=production",
-		"start": "webpack serve --env port=8080",
 		"test:unit": "jest --config ./config/jest/jest.config.ts",
 		"storybook": "storybook dev -p 6006 -c ./config/.storybook",
 		"build-storybook": "storybook build -c ./config/.storybook",
-		"deploy": "npm run build && npm version patch && npm publish"
+		"release": "npm run build && npm version patch && npm publish"
 	},
 	"author": "",
 	"license": "ISC",
