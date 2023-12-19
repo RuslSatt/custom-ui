@@ -10,7 +10,7 @@ export const getWebpackConfig = (options: BuildOptions): webpack.Configuration =
 		mode,
 		entry: paths.entry,
 		output: {
-			filename: '[name].[contenthash].js',
+			filename: 'index.js',
 			path: paths.output,
 			clean: true,
 			libraryTarget: 'umd'
