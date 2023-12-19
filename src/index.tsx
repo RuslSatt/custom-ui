@@ -1,7 +1,3 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from 'app/App';
+import { Button } from 'components/Button/ui/Button';
 
-const root = createRoot(document.getElementById('root'));
-
-root.render(<App />);
+export { Button };

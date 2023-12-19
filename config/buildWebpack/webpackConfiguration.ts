@@ -3,8 +3,10 @@ import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { getLoaders } from './buildLoaders';
 
-export const getWebpackConfig = (options: BuildOptions) => {
-	const { paths, mode, isDev } = options;
+import webpack from 'webpack';
+
+export const getWebpackConfig = (options: BuildOptions): webpack.Configuration => {
+	const { paths, mode } = options;
 
 	return {
 		mode,
@@ -12,24 +14,15 @@ export const getWebpackConfig = (options: BuildOptions) => {
 		output: {
 			filename: '[name].[contenthash].js',
 			path: paths.output,
-			clean: true
+			clean: true,
+			libraryTarget: 'umd'
 		},
-		devtool: isDev ? 'inline-source-map' : undefined,
-		devServer: {
-			open: true,
-			historyApiFallback: true,
-			port: options.port
-		},
-		plugins: [
-			new HtmlWebpackPlugin({
-				template: paths.html
-			}),
-			new MiniCssExtractPlugin({
-				filename: 'css/[name].[contenthash].css'
-			})
-		],
+		plugins: [],
 		module: {
-			rules: getLoaders(isDev)
+			rules: getLoaders()
+		},
+		externals: {
+			react: 'react'
 		},
 		resolve: {
 			extensions: ['.tsx', '.ts', '.js'],
