@@ -10,7 +10,7 @@
 		"test:unit": "jest --config ./config/jest/jest.config.ts",
 		"storybook": "storybook dev -p 6006 -c ./config/.storybook",
 		"build-storybook": "storybook build -c ./config/.storybook",
-		"publish": "npm run build && npm version patch && npm publish"
+		"deploy": "npm run build && npm version patch && npm publish"
 	},
 	"author": "",
 	"license": "ISC",
