@@ -1,6 +1,6 @@
 {
 	"name": "rs-custom-ui",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Ui components",
 	"main": "index.ts",
 	"scripts": {
