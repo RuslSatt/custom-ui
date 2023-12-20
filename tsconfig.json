@@ -20,5 +20,5 @@
 			"module": "CommonJS"
 		}
 	},
-	"include": ["./globals.d.ts", "src/**/*/ui"]
+	"include": ["src/**/*/ui"]
 }

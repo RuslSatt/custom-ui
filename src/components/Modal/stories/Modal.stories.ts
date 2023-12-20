@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../ui/Modal';
-import '../ui/Button.css';
+import { Modal } from '../ui/Modal';
+import '../ui/Modal.css';
 
-const meta: Meta<typeof Button> = {
-	title: 'shared/ui/Button',
-	component: Button,
+const meta: Meta<typeof Modal> = {
+	title: 'Modal',
+	component: Modal,
 	parameters: {},
 
 	tags: ['autodocs'],
@@ -13,31 +13,11 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Modal>;
 
-export const Primary: Story = {
+export const Preview: Story = {
 	args: {
-		// primary: true,
-		label: 'Button'
-	}
-};
-
-export const Secondary: Story = {
-	args: {
-		label: 'Button'
-	}
-};
-
-export const Large: Story = {
-	args: {
-		// size: 'large',
-		label: 'Button'
-	}
-};
-
-export const Small: Story = {
-	args: {
-		// size: 'small',
-		label: 'Button'
+		isOpen: true,
+		children: 'This is a modal window'
 	}
 };

@@ -2,10 +2,12 @@
 	--rs-bg-color: #4f7942;
 	--rs-bg-hover-color: #3e6431;
 	--rs-font-color: #fafafa;
+	--rs-overlay-color: hsla(0, 0%, 38%, 0.377);
 }
 
 :root[data-theme='dark'] {
 	--rs-bg-color: #55a83c;
 	--rs-bg-hover-color: #3e6431;
 	--rs-font-color: #000000;
+	--rs-overlay-color: #616161;
 }

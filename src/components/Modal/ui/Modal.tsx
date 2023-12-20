@@ -1,17 +1,40 @@
-import React, { FC } from 'react';
-import { ButtonHTMLAttributes } from 'react';
-import './Button.css';
+import React from 'react';
+import { classNames } from '../../../helpers/classNames';
+import { Portal } from '../../Portal/Portal';
+import './Modal.css';
 
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-	label?: string;
+interface IModal {
+	children?: React.ReactNode;
+	isOpen?: boolean;
+	onClose?: () => void;
 }
 
-export const Button: FC<IButton> = (props) => {
-	const { children, label, ...otherProps } = props;
+export const Modal = (props: IModal) => {
+	const { children, isOpen, onClose, ...otherProps } = props;
+
+	const handleClose = () => {
+		if (onClose) {
+			onClose();
+		}
+	};
+
+	const handleContentClick = (e: React.MouseEvent) => {
+		e.stopPropagation();
+	};
+
+	const mods: Record<string, boolean> = {
+		opened: isOpen
+	};
 
 	return (
-		<button className='rs-button' {...otherProps} type='button'>
-			{label || children}
-		</button>
+		<Portal>
+			<div className={classNames('rs-modal', [], mods)} {...otherProps}>
+				<div className='rs-modal-overlay' onClick={handleClose}>
+					<div className='rs-modal-content' onClick={handleContentClick}>
+						{children}
+					</div>
+				</div>
+			</div>
+		</Portal>
 	);
 };
