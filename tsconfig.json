@@ -20,6 +20,5 @@
 			"module": "CommonJS"
 		}
 	},
-	"include": ["src"],
-	"exclude": ["src/**/*/test", "src/**/*/stories", "./config"]
+	"include": ["./globals.d.ts", "src/**/*/ui"]
 }

@@ -1,3 +1,3 @@
-import { Button } from './components/Button/ui/Button';
+import './styles/theme.css';
 
-export { Button };
+export { Button } from './components/Button/ui/Button';

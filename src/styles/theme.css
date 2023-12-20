@@ -1,0 +1,11 @@
+:root {
+	--rs-bg-color: #4f7942;
+	--rs-bg-hover-color: #3e6431;
+	--rs-font-color: #fafafa;
+}
+
+:root[data-theme='dark'] {
+	--rs-bg-color: #55a83c;
+	--rs-bg-hover-color: #3e6431;
+	--rs-font-color: #000000;
+}
