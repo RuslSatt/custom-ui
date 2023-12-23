@@ -1,6 +1,6 @@
 import React from 'react';
-import { classNames } from '../../../helpers/classNames';
-import { Portal } from '../../Portal/Portal';
+import { classNames } from '../../helpers/classNames';
+import { Portal } from '../Portal/Portal';
 import './Modal.css';
 
 interface IModal {

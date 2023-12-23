@@ -3,6 +3,7 @@
 	--rs-bg-hover-color: #3e6431;
 	--rs-font-color: #fafafa;
 	--rs-overlay-color: hsla(0, 0%, 38%, 0.377);
+	--rs-border-color: #c4c4c4;
 }
 
 :root[data-theme='dark'] {
@@ -10,4 +11,5 @@
 	--rs-bg-hover-color: #3e6431;
 	--rs-font-color: #000000;
 	--rs-overlay-color: #616161;
+	--rs-border-color: #c4c4c4;
 }

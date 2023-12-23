@@ -20,5 +20,5 @@
 			"module": "CommonJS"
 		}
 	},
-	"include": ["src/**/*/ui"]
+	"include": ["src/**/*/ui", "src/components/Modal/Modal.tsx"]
 }

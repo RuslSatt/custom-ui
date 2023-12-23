@@ -1,0 +1,23 @@
+.rs-input-root {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid var(--rs-border-color);
+	border-radius: 4px;
+}
+
+.rs-input {
+	display: block;
+	font: inherit;
+	letter-spacing: inherit;
+	padding: 7px 5px;
+	background: none;
+	width: 100%;
+	margin: 0;
+	min-width: 0;
+	border: 0;
+}
+
+.rs-input:focus {
+	border: none;
+	outline: none;
+}
